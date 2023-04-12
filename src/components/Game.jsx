@@ -20,13 +20,13 @@ export default function Game() {
         let description;
         if (move > 0) {
             description = 'Go to move #' + move;
-        }else{
+        } else {
             description = 'Go to game start';
         }
 
         return (
-            <li key={move}>
-                <button onClick={() => jumpTo(move)}>
+            <li style={{ margin: "1px" }} key={move}>
+                <button style={{ height: "4rem", width: "8rem", margin: "1px", fontSize: "1rem", backgroundColor: "saddlebrown" }} onClick={() => jumpTo(move)}>
                     {description}
                 </button>
             </li>
@@ -34,12 +34,12 @@ export default function Game() {
     })
     return (
         <div className="game">
-            <div className="game-board">
-                <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
-            </div>
             <div className="game-info">
+                <div className="game-board">
+                    <Board xIsNext={xIsNext} squares={currentSquares} onPlay={handlePlay} />
+                </div>
                 <ol>
-                    {moves} 
+                    {moves}
                 </ol>
             </div>
         </div>

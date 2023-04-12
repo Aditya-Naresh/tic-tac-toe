@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  background-color: burlywood;
 }
 
 body {
@@ -60,15 +61,15 @@ body {
   background: #fff;
   border: 1px solid #999;
   float: left;
-  font-size: 24px;
+  font-size: 5rem;
   font-weight: bold;
-  line-height: 34px;
-  height: 34px;
+  line-height: 8rem;
+  height: 8rem;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 34px;
+  width: 8rem;
 }
 
 .board-row:after {
@@ -83,6 +84,8 @@ body {
 .game {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
 }
 
 .game-info {
@@ -92,3 +95,4 @@ body {
 .App{
   align-items: center;
 }
+
